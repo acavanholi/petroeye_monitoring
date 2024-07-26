@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #12111E; /* Azul escuro */
+    color: #fff;
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.salvarbtn{
+    width: 100px;
+    margin: 10px;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px; /* Ajusta para não sobrepor o cabeçalho */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: scroll;
+
+
+}
+
+h1 {
+    text-align: center;
+    color: #12111E;
+    padding: 20px;
+}
+
+#search {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    overflow: visible;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #d3d3d3;
+    color: #1d1d1d;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn, .mudar_para_usuario {
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.dropbtn{
+width: 180px;
+}
+
+
+.mudar_para_usuario:hover, .dropdown:hover .dropbtn {
+    background-color: #e65c00; /* Laranja mais escuro */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content button {
+    background-color: #fff;
+    color: #003366; /* Azul escuro */
+    padding: 10px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+p {
+    text-align: center;
+    color: #003366;
+}
+
+.rodape {
+    font-size: 10px;
+}
+
+.adicionar-usuario-container, .conteudo-usuarios {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    align-self: flex-end;
+
+}
+
+.adicionar-usuario-container h2, .conteudo-usuarios h2 {
+    text-align: center;
+}
+
+.adicionar-usuario-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.adicionar-usuario-container label, 
+.adicionar-usuario-container input,
+.adicionar-usuario-container button {
+    flex: 1 1 auto;
+}
+
+.adicionar-usuario-container label {
+    margin-right: 5px;
+    flex-basis: 100px;
+}
+
+.adicionar-usuario-container input {
+    margin-bottom: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    flex-basis: 200px;
+}
+
+.adicionar-usuario-container button {
+    background-color: #ff6600; /* Laranja */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    flex-basis: 100px;
+}
+
+.adicionar-usuario-container button:hover {
+    background-color: #e65c00; /* Laranja mais escuro */
+}
+
+p.msg {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+
+.formulario-adicionar-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario-adicionar-usuario label {
+    margin-right: 5px;
+}
+
+.formulario-adicionar-usuario input, 
+.formulario-adicionar-usuario button {
+    margin-right: 10px;
+}
+
+.formulario-adicionar-usuario button {
+    flex-shrink: 0;
+    padding: 10px 15px;
+}
+
+.btn-remover {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-remover:hover {
+    background-color: darkred;
+}
+
+.form-row{
+margin: 10px;
+}

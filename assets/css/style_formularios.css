@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0eff6;
+}
+
+header {
+    background-color: #333;
+    /* Cor de fundo do cabeçalho */
+    color: #fff;
+    /* Cor do texto do cabeçalho */
+    padding: 15px 20px;
+    /* Espaçamento interno do cabeçalho */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Garantir que o cabeçalho fique sobre o contêiner */
+}
+
+.container {
+    width: 200px;
+    /* Diminuir a largura do menu */
+    font-size: 12px;
+    /* Diminuir o tamanho da fonte no menu */
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    padding-top: 70px;
+    /* Ajustar para a altura do cabeçalho */
+    margin-top: 0;
+    margin-left: 0;
+    justify-content: center;
+}
+
+.menu-block ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+}
+
+.menu-block ul li {
+    margin: 10px 0;
+}
+
+.menu-block ul li button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2px;
+    height: 50px;
+    /* Diminuir a altura do botão no menu */
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+    /* Diminuir o tamanho da fonte do botão */
+}
+
+.menu-block ul li button:hover {
+    background-color: #666;
+    color: #FE8F1E;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+}
+
+.main-container {
+    margin-left: 230px;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+    margin-bottom: 40px;/
+}
+
+.content-container {
+    padding: 20px;
+}
+
+.table-container {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+thead {
+    background-color: #f9f9f9;
+    border-bottom: 2px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: center;
+    /* Centralizar o texto */
+    border: 1px solid #ddd;
+    /* Manter as linhas das colunas */
+    font-size: 14px;
+    min-width: 100px;
+    /* Definir largura mínima fixa para as células */
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button.botton {
+    width: auto;
+    height: auto;
+    padding: 8px 16px;
+    background-color: #003366;
+    border: none;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.botton:hover {
+    background-color: #001d3a;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.botao_enviar{
+    padding: 10px 20px;
+    background-color: #FE8F1E;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.botao_cancelar {
+    padding: 10px 20px;
+    background-color: #b1b1b1;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.botao_enviar:hover,
+.botao_cancelar:hover {
+    background-color: #8e8e8e;
+}
+
+p {
+    margin: 20px 0;
+    font-size: 14px;
+    /* Ajustar o tamanho da fonte do parágrafo */
+}
+
+td:empty:after {
+    content: '\00a0';
+    /* Garante que células vazias sejam clicáveis */
+}
+
+.form-group {
+    margin-top: 20px;
+    font-size: 14px;
+    /* Ajustar o tamanho da fonte dos campos do formulário */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* Espaçamento entre os inputs */
+}
+
+.form-group .form-item {
+    flex: 1 1 calc(33.333% - 10px);
+    /* Exibe até 3 inputs por linha, considerando o espaçamento */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    height: 24px;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group .form-item:nth-child(3n) {
+    margin-right: 0;
+    /* Remove a margem à direita do último input em cada linha */
+}
+
+@media (max-width: 1200px) {
+    .form-group .form-item {
+        flex: 1 1 calc(50% - 10px);
+        /* Ajuste para telas menores, exibindo até 2 inputs por linha */
+    }
+}
+
+@media (max-width: 800px) {
+    .form-group .form-item {
+        flex: 1 1 calc(100% - 10px);
+        /* Ajuste para telas ainda menores, exibindo 1 input por linha */
+    }
+}

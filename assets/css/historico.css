@@ -1,0 +1,121 @@
+body {
+    font-family: "inter";
+    margin: 0;
+}
+
+
+/* Estilo para o contêiner dos resultados */
+.resultados {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 60px);
+    margin-top: 80px;
+}
+
+
+/* Estilo para cada resultado */
+.resultado {
+    display: flex;
+    padding: 0;
+    margin-bottom: 15px;
+    margin-right: 0;
+    height: auto;
+    background: #ebebeb;
+    border-radius: 10px;
+    border: solid 1.5px #dedede;
+    align-items: flex-start;
+    width: 100%; /* Ajuste para garantir que o resultado ocupe toda a largura do contêiner */
+    overflow-y: auto;
+}
+
+/* Estilo para a descrição do resultado */
+.resultado ul {
+    font-size: 13px;
+    color: #333;
+    list-style: none;
+    flex-direction: column;
+    align-items: flex-start;
+    column-gap: 2px;
+    flex-grow: 1;
+    margin-left: -30px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Estilo para a linha dentro do resultado */
+.resultado .descricao {
+    line-height: 1.7;
+    align-self: flex-start;
+    margin-left: 30px;
+    display: grid;
+    padding: 20px;
+    margin-top: 40px;
+    width: 33%;
+}
+
+.nomePOCO {
+    text-align: left;
+    position: absolute;
+    margin-left: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.nomePOCO a {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 90px;
+}
+
+@media only screen and (max-width: 892px) {
+
+    h5 {
+        margin-left: 5%;
+    }
+
+    .resultado {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+    }
+
+    .resultado .descricao {
+        margin: 0;
+        margin-top: 50px;
+        padding: 0;
+    }
+
+    .nomePOCO {
+        margin-left: 10px;
+    }
+
+    @media only screen and (max-width: 524px) {
+        .resultado {
+            flex-direction: column;
+            margin-bottom: 15px;
+            align-self: flex-start;
+            display: block;
+        }
+
+        .resultado h3 {
+            font-size: 15px;
+        }
+
+        .resultado .descricao ul {
+            line-height: 1.7;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: -20px;
+        }
+
+        .nomePOCO {
+            margin-right: auto;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+/* Importa a fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+/* Contêiner principal */
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* Estilo para o menu lateral */
+.menu-block {
+    display: flex;
+    position: absolute;
+    width: 20%;
+    background: #f4f4f4;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para os itens do menu */
+.menu-block ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-block ul li {
+    margin-bottom: 10px;
+}
+
+.menu-block button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menu-block button:hover {
+    background: #0056b3;
+}
+
+/* Estilo para o conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Estilo para a tabela de dados */
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.dataTable th, .dataTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.dataTable th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.dataTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.dataTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsividade */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .menu-block {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+}

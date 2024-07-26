@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: url('../images/background.png') no-repeat center center fixed; 
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; 
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+}
+
+
+/* Estilo para o cabeçalho */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12111E;
+    padding: 10px 20px;
+    color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
+    height: 40px; /* Definindo uma altura menor */
+}
+
+.logo img {
+    height: 40px; /* Ajuste conforme necessário */
+}
+
+/* Estilo para o container de login */
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 100px;
+
+}
+.input-box {
+    position: relative;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.input-box input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #555;
+    outline: none;
+    background: transparent;
+    margin-left: 10px; 
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #333;
+    font-size: 16px;
+}
+
+h3 {
+    margin-top: -15px;
+    font-size: 200%;
+    text-align: center;
+    color: black;
+}
+
+.forget {
+    display: block;
+    text-align: left;
+    margin-left: 11px;
+    font-size: 16px;
+    color: black; 
+}
+
+.botton {
+    display: block;
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+    background-color: #FE8F1E;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 50px auto 0 auto; 
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -20px;
+    font-size: 12px;
+    color: #555;
+}

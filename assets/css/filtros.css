@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0px;
+}
+
+h2 {
+  width: 100%;
+  position: unset;
+  top: 0%;
+  background-color: #ececec;
+  padding: 0px 0px;
+  margin-left: 0px;
+  font-size: 15px;
+  text-align: center;
+}
+
+#jumper {
+
+  width: 100%;
+  height: 10%;
+  margin-top: 6%;
+}
+
+
+.btn-pesquisar {
+  display: block;
+  width: 70%;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff8f1c;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.btn-pesquisar-mobile {
+  display: none;
+}
+
+/* Estilo para o contêiner dos filtros */
+.filtros {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 45px;
+  margin-right: 3%;
+  width: 180px;
+  height: 570px;
+  background-color: #ebebeb;
+  padding: 0;
+  align-content: center;
+}
+
+
+/* Estilo para o contêiner do ícone do filtro */
+.filtro-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0%;
+}
+
+/* Estilo para o título dos filtros */
+.filtros-title {
+  font-size: 22px;
+  margin-left: 7%;
+  margin-right: auto;
+  margin-top: 0%;
+}
+
+/* Estilo para os filtros dropdown */
+.filtros ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 13px;
+  border: none;
+  box-shadow: 0 8px 6px -10px #808080;
+  align-items: center;
+}
+
+/* Estilo para o ícone do filtro */
+.filtroicon {
+  width: 20px;
+  height: 23px;
+  margin-left: 15%;
+}
+
+
+/* Estilo para o seletor de data */
+.datepicker {
+  width: 68%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  display: block;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 700;
+  font-size: smaller;
+}
+
+/* Estilo para o input de data */
+#datepicker {
+  font-family: "Inter";
+  border-radius: 5px;
+  border: 1px #d6d6d6 solid;
+  outline: none;
+  text-align: center;
+}
+
+/* Estilo para os parágrafos nos filtros */
+.filtros p {
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Estilo para o dropdown dos filtros */
+.filtros .dropdown {
+  position: relative;
+  width: auto;
+  cursor: pointer;
+  border-radius: 13px;
+  height: 35px;
+  margin-bottom: 10%;
+}
+
+/* Estilo para a opção padrão do dropdown */
+.dropdown .default_option {
+  font-size: small;
+  padding: 10px;
+  text-align: center;
+  background: #ffff;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 13px;
+  position: relative;
+  align-items: center;
+  max-height: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0%;
+}
+
+/* Estilo para a lista de opções do dropdown */
+.dropdown ul {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 13px;
+  padding: 15px;
+  display: none;
+  border: #e6e6e6 1px solid;
+  width: 65%;
+  margin-top: 0%;
+  margin-left: 15px;
+  font-size: 13PX;
+
+}
+
+/* Estilo para a lista de opções do dropdown quando ativo */
+.dropdown ul.active {
+  display: block;
+  z-index: 1;
+
+}
+
+/* Estilo para os itens da lista do dropdown */
+.dropdown ul li {
+  list-style-type: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+}
+
+/* Estilo para o último item da lista do dropdown */
+.dropdown ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilo para hover das opções */
+.dropdown ul li:hover {
+  color: #6f768d;
+}
+
+/* Estilo para o triângulo no dropdown */
+.dropdown .default_option::before {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  font-size: 18px;
+  margin-right: 5px;
+  float: right;
+  color: #979797;
+}
+
+.dropdown .default_option.selected::before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 12px;
+  margin-right: 5px;
+  color: #979797;
+}
+
+/* Estilo para o contêiner dos resultados */
+.resultados {
+  position: absolute;
+  top: 8%;
+  left: 260px;
+  width: calc(100% - 290px);
+}
+
+.resultados h4 {
+  margin-bottom: 12px;
+  margin-left: 25px;
+}
+
+/* Estilo para cada resultado */
+.resultado {
+  flex-direction: row;
+  display: flex;
+  padding: 20px;
+  margin-bottom: 15px;
+  height: auto;
+  background-color: #ececec;
+  border-radius: 30px;
+  border: 1px solid #d9d9d9;
+  align-items: flex-start;
+  column-gap: 0px;
+  width: auto;
+  flex-direction: row;
+
+}
+
+/* Estilo para o título do resultado */
+.resultado h2 {
+  font-size: 18px;
+  color: #212121;
+}
+
+
+/* Estilo para a descrição do resultado */
+.resultado ul {
+  font-size: 14px;
+  color: #333;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  column-gap: 2px;
+  overflow-y: auto;
+  flex-grow: 1;
+  /* Permitir que a lista ocupe todo o espaço disponível */
+  margin-left: -40px;
+}
+
+/* Estilo para a linha dentro do resultado */
+.resultado .descricao {
+  line-height: 1.7;
+  align-self: flex-end;
+  margin-left: 20px;
+}
+
+.resultado .descricao ul {
+  line-height: 1.7;
+  margin-top: 0;
+  /* Adicionado para remover a margem superior */
+  margin-bottom: 0;
+  /* Adicionado para remover a margem inferior */
+}
+
+
+/* Estilo para o mapa dos resultados */
+.resultadomapa {
+  min-width: 200px;
+  min-height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+@media only screen and (max-width: 892px) {
+
+  /* Estilo para o contêiner dos resultados */
+  .resultados {
+    position: static;
+    margin-top: 140px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filtros {
+    top: 100px;
+    width: 150;
+    height: auto;
+    background-color: #ebebeb;
+    align-items: left;
+    border-radius: 10px;
+    position: absolute;
+  }
+
+
+  .resultadomapa {
+    display: none;
+  }
+
+  .dropdown {
+    display: none;
+  }
+
+  .btn-pesquisar {
+    display: none;
+  }
+
+  .filtros h2 {
+    cursor: pointer;
+  }
+
+  .filtro-container {
+    cursor: pointer;
+    margin-top: 20px;
+
+  }
+
+  .datepicker {
+    display: none;
+  }
+
+  .resultado ul {
+    font-size: 20px;
+  }
+
+  .resultado h2 {
+    font-size: 25px;
+  }
+
+  @media only screen and (max-width: 426px) {
+    .resultado {
+      flex-direction: column;
+      margin-bottom: 15px;
+      height: auto;
+      width: auto;
+
+    }
+
+    .resultado .descricao ul {
+      line-height: 1.7;
+      margin-top: 0;
+      /* Adicionado para remover a margem superior */
+      margin-bottom: 0;
+      /* Adicionado para remover a margem inferior */
+      margin-left: 0;
+      /* Adicionado para remover a margem esquerda */
+    }
+
+  }
+}

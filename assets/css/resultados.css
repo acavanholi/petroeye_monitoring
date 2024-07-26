@@ -1,0 +1,378 @@
+body {
+  font-family: "inter";
+  margin: 0px;
+}
+
+.btn-filtrar {
+  display: block;
+  width: 70%;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ff8f1c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-filtrar:hover {
+  background-color: #080f4d;
+}
+
+
+
+/* Estilo para o contêiner dos filtros */
+.filtros {
+  position: fixed;
+  margin-top: 100px;
+  margin-left: 45px;
+  margin-right: 3%;
+  padding-bottom: 18px;
+  width: 180px;
+  height: auto;
+  background-color: #ebebeb;
+  align-content: flex-start;
+  border-radius: 5px;
+}
+
+
+.filtro-container {
+  margin: 10px;
+  display: flex;
+}
+
+.filtro-container img {
+  margin-right: 10px;
+}
+
+
+/* Estilo para o título dos filtros */
+.filtros-title {
+  margin: 0%;
+  align-self: center;
+}
+
+/* Estilo para os filtros dropdown */
+.filtros ul {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  margin-bottom: 15px;
+  display: flex;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 13px;
+  border: none;
+  box-shadow: 0 8px 6px -10px #808080;
+  align-items: center;
+}
+
+/* Estilo para o ícone do filtro */
+.filtroicon {
+  width: 20px;
+  height: 23px;
+  margin-left: 15%;
+}
+
+
+/* Estilo para o seletor de data */
+.datepicker {
+  width: 68%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  display: block;
+  border-radius: 5px;
+  outline: none;
+  font-weight: 700;
+  font-size: smaller;
+  text-align: center;
+}
+
+/* Estilo para o input de data */
+#datepicker {
+  font-family: "Inter";
+  border-radius: 5px;
+  border: 1px #d6d6d6 solid;
+  outline: none;
+  text-align: center;
+}
+
+/* Estilo para os parágrafos nos filtros */
+.filtros p {
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Estilo para o dropdown dos filtros */
+.filtros .dropdown {
+  position: relative;
+  height: auto;
+  padding: 0px;
+  margin-bottom: 5px;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Estilo para a opção padrão do dropdown */
+.dropdown .default_option {
+  font-size: 12px;
+  padding: 5px;
+  padding-bottom: 0;
+  padding-left: 20px;
+  text-align: center;
+  background: #ffff;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  position: relative;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Estilo para a lista de opções do dropdown */
+.dropdown ul {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 5px;
+  display: none;
+  border: #e6e6e6 1px solid;
+  margin-top: 0%;
+  margin-left: 15px;
+  font-size: 13px;
+  width: 70%;
+
+}
+
+/* Estilo para a lista de opções do dropdown quando ativo */
+.dropdown ul.active {
+  display: block;
+  z-index: 1;
+}
+
+/* Estilo para os itens da lista do dropdown */
+.dropdown ul li {
+  font-size: 12px;
+  text-align: center;
+  list-style-type: none;
+  padding: 5px;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+}
+
+
+/* Estilo para o último item da lista do dropdown */
+.dropdown ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* Estilo para hover das opções */
+.dropdown ul li:hover {
+  background: #dbdbdb;
+  border-radius: 2px;
+}
+
+/* Estilo para o triângulo no dropdown */
+.dropdown .default_option::before {
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 800;
+  font-size: 18px;
+  margin-right: 5px;
+  float: right;
+  color: #979797;
+}
+
+.dropdown .default_option.selected::before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 10px;
+  margin-right: 5px;
+  color: #979797;
+}
+
+/* Estilo para o contêiner dos resultados */
+.resultados {
+  position: absolute;
+  left: 260px;
+  width: calc(100% - 290px);
+  margin-top: 80px;
+}
+
+
+/* Estilo para cada resultado */
+.resultado {
+  display: flex;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-right: 0;
+  height: auto;
+  background: #ebebeb;
+  border-radius: 10px;
+  border: solid 1.5px #dedede;
+  align-items: flex-start;
+  width: auto;
+  overflow-y: auto;
+}
+
+
+/* Estilo para a descrição do resultado */
+.resultado ul {
+  font-size: 13px;
+  color: #333;
+  list-style: none;
+  flex-direction: column;
+  align-items: flex-start;
+  column-gap: 2px;
+  flex-grow: 1;
+  margin-left: -30px;
+  line-height: 1.7;
+  margin-bottom: 0;
+
+}
+
+/* Estilo para a linha dentro do resultado */
+.resultado .descricao {
+  line-height: 1.7;
+  align-self: flex-start;
+  margin-left: 30px;
+  display: grid;
+  padding: 20px;
+  margin-top: 40px;
+  width: 33%;
+}
+
+
+
+.dropdown ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.nomePOCO {
+  text-align: left;
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 10px;
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+}
+
+@media only screen and (max-width: 892px) {
+
+  /* Estilo para o contêiner dos resultados */
+  .resultados {
+    position: static;
+    margin-top: 80px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h5 {
+    margin-left: 5%;
+  }
+
+  .resultado {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+  }
+
+
+  .resultado .descricao {
+    margin: 0;
+    margin-top: 50px;
+    padding: 0px;
+  }
+
+
+  .nomePOCO {
+    margin-left: 10px;
+  }
+
+  .filtros {
+    width: 130px;
+    height: auto;
+    background: #ebebeb;
+    align-items: right;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 9px;
+    padding-bottom: 0;
+    right: 2%;
+
+  }
+
+
+  .dropdown {
+    display: none;
+  }
+
+  .btn-filtrar {
+    display: none;
+  }
+
+
+
+  .datepicker {
+    display: none;
+  }
+
+
+  @media only screen and (max-width: 524px) {
+
+
+    .resultado {
+      flex-direction: column;
+      margin-bottom: 15px;
+      align-self: flex-start;
+      display: block;
+    }
+
+    .resultado h3 {
+      font-size: 15px;
+    }
+
+    .filtros {
+      margin-right: 5%;
+    }
+
+    .resultado .descricao ul {
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -20px;
+    }
+
+    .nomePOCO {
+      margin-right: auto;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+  }
+}
+

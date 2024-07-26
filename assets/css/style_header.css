@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #12111E;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.logo img {
+    width: 200px;
+    height: 50px;
+}
+
+.hamburger,
+.search-icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+}
+
+.hamburger {
+    margin-right: 20px;
+    margin-left: 12px;
+}
+
+.search-icon {
+    margin-right: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+.search-icon img {
+    width: 100%;
+    height: auto;
+}
+
+.nav-list {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #12111E;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top: 20px;
+}
+
+.nav-list a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-list a:hover {
+    color: #FE8F1E;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.search-box {
+    display: none;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    background: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+    transition: width 0.5s;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-radius: 20px;
+    margin-right: 2%;
+
+
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 5px;
+    background:transparent;
+}
